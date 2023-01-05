@@ -1,0 +1,310 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  */
+/*  */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header > h1 {
+  font-size: 45px;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 10px;
+  border: solid black 1px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  padding: 20px 30px;
+  font-size: xx-large;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px -6px #555;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(119, 119, 119);
+  width: 85%;
+  margin: 0 auto 100px;
+}
+
+section > div.container {
+  width: 200px;
+  height: 200px;
+  border: solid rgb(239, 243, 239) 2px;
+  border-radius: 2px;
+  transition: width 2s, height 2s, transform 1s;
+}
+.row1 > div:hover,
+.row4 > div:hover {
+  transform: scale(1.2, 1.2);
+}
+section > div#container4:hover {
+  transform: scale(1.1, 1.1);
+}
+.row3 div:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+}
+.row2 {
+  display: flex;
+  justify-content: center;
+}
+.row3 {
+  display: flex;
+  justify-content: center;
+}
+.row4 {
+  display: flex;
+  justify-content: center;
+}
+/* .row1 div {
+  background-color: indigo;
+}
+.row2 div {
+  background-color: purple;
+}
+.row3 div {
+  background-color: palevioletred;
+}
+.row4 div {
+  background-color: pink;
+} */
+
+.container {
+  flex-grow: 1;
+}
+#container1 {
+  flex-grow: 2;
+}
+#container3 {
+  flex-grow: 2;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* hover zoom in image
+transisition: 
+transform: sclae(1.1,1.1)
+
+*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 50px 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.card-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.caption {
+  position: relative;
+  margin: auto;
+  margin-top: -30px;
+  width: 80%;
+  display: block;
+  padding: 30px;
+  background-color: white;
+  max-width: 700px;
+  border-top-left-radius: 30px;
+}
+
+h1,
+p {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+#p {
+  font-size: 30px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+  .card-image {
+    width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(0, 80, 145);
+}
+footer > div {
+  padding: 40px 50px;
+}
+footer > div a {
+  text-decoration: none;
+  padding-left: 50px;
+  color: cornsilk;
+}
